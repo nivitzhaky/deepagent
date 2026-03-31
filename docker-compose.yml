@@ -1,0 +1,14 @@
+services:
+
+  api:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "4002:8000"
+    volumes:
+      - ./app:/app                    # hot reload — source changes apply instantly
+      - ./app/frontend:/app/frontend  # frontend hot reload
+      - ./workspace:/workspace        # generated code sessions
+    env_file:
+      - ./app/.env

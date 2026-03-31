@@ -1,0 +1,7 @@
+app/venv/
+app/__pycache__/
+app/.pytest_cache/
+workspace/
+__pycache__/
+*.pyc
+*.pyo
